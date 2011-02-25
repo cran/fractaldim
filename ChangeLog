@@ -1,0 +1,23 @@
+0.8-1 (02/25/2010)
+-----
+Made compatible with RandomFields 2.0.42.
+
+0.8-0 (02/24/2010)
+-----
+Help files finished. Various bugs fixed.
+Initial submission to CRAN.
+
+0.7-0 (12/11/2010)
+-----
+Everything about two scales removed.
+Madogram and Rodogram estimators added.
+
+0.6-0 (06/07/2010)
+-----
+Increment1 estimator added to 1d-estimators.
+
+The way variation est. is inputted changed.
+
+0.5-0 (04/28/2010)
+-----
+Hybrid estimator renamed to Variation estimator
