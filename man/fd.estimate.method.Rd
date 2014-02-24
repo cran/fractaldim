@@ -283,7 +283,8 @@ Davies, S., Hall, P. (1999) Fractal analysis of surface roughness by using spati
 	
 Genton, M. G. (1998) Highly robust variogram estimation. Mathematical Geology \bold{30}, 213--221.
 
-Gneiting, T., Sevcikova, H., Percival D.B. (2010) Estimators of Fractal Dimension: Assessing the Roughness of Time Series and Spatial Data. Technical Report No. 577, Department of Statistics, University of Washington. \url{http://www.stat.washington.edu/research/reports/2010/tr577.pdf}	
+Gneiting, T., Sevcikova, H. and Percival, D. B. (2012). Estimators of fractal dimension: Assessing the smoothness of time series and spatial data. Statistical Science, 27(2), 247-277. (Version as technical report available at \url{http://www.stat.washington.edu/research/reports/2010/tr577.pdf})
+
 
 Hall, P., Wood, A. (1993) On the Performance of Box-Counting Estimators of
   Fractal Dimension. Biometrika \bold{80} (1), 246--252.

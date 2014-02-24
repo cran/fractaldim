@@ -64,27 +64,25 @@ ComputeSemipgramFFT <- function(X)
   }
 
 
-fd.estim.dctII <- function (data, plot.loglog=FALSE, nlags = "auto", ...) {
-  	rn<-length(data)
-	nr.lags <- rn-1
-  	if (nlags == "auto") {
-    	nr.lags<- min(trunc(4*rn^(2/3)), nr.lags) # suggestion of Chan, Hall, Poskitt
-  	} else {
-    	if (nlags != "all") {
-      		nlags <- as.numeric(nlags)
-      		nr.lags <- min(nlags, nr.lags)
-    	}
-  	}
-  	Aall <- ComputeDCT2FFT(data)[-1]
-  	npoints <- length(Aall)
-  	nr.lags <- min(nr.lags, npoints-1)
-  	A<-Aall[2:npoints]
-  	logx<-log((1:length(A))*pi*(rn-1)/rn)
-  	logAA<-log(A*A)
-  	return(do.fd.estimate1d.spectral(x=logx, y=logAA, use.lags=1:nr.lags,
-  			method.name='dctII', data.size=rn, method.name.main="DCT-II", yname=expression(log(C^2)), 
-  			plot.loglog=plot.loglog, ...))
-}
+fd.estim.dctII <- function (data, plot.loglog=FALSE, nlags = "auto", ...) { 
+	rn<-length(data)
+	nr.lags <- rn-1 
+	if (nlags == "auto") { 
+		nr.lags<- min(trunc(4*rn^(2/3)), nr.lags) # suggestion of Chan, Hall, Poskitt 
+	} else { 
+		if (nlags != "all") { 
+			nlags <- as.numeric(nlags) 
+			nr.lags <- min(nlags, nr.lags) 
+		} 
+	} 
+	A <- ComputeDCT2FFT(data)[-1] 
+	nr.lags <- min(nr.lags, length(A)) 
+	logx<-log((1:length(A))*pi*(rn-1)/rn) 
+	logAA<-log(A*A)
+	return(do.fd.estimate1d.spectral(x=logx, y=logAA, use.lags=1:nr.lags, 
+			method.name='dctII', data.size=rn, method.name.main="DCT-II", yname=expression(log(C2)), 
+			plot.loglog=plot.loglog, ...)) 
+} 
 
 ComputeDCT2FFT <- function(X)
   {

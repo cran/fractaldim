@@ -1,5 +1,4 @@
 \name{fractaldim-package}
-\Rdversion{1.1}
 \alias{fractaldim-package}
 \alias{fractaldim}
 \docType{package}
@@ -10,8 +9,8 @@ The package implements various methods for estimating fractal dimension of time 
 \details{
 \tabular{ll}{
 Package: \tab fractaldim\cr
-Version: \tab 0.8-1\cr
-Date: \tab 2011-02-25\cr
+Version: \tab 0.8-4\cr
+Date: \tab 2014-02-24\cr
 Depends: \tab R (>= 2.11.0), abind\cr
 Suggests: \tab wavelets, pcaPP, RandomFields, snowFT
 }
@@ -27,9 +26,8 @@ Don Percival <dbp@apl.washington.edu>
 Maintainer: Hana Sevcikova <hanas@uw.edu>
 }
 \references{
-Gneiting, T., Sevcikova, H., Percival D.B. (2010): Estimators of Fractal Dimension: Assessing the Roughness of Time Series and Spatial Data. Technical Report No. 577, Department of Statistics, University of Washington. \url{http://www.stat.washington.edu/research/reports/2010/tr577.pdf}
+Gneiting, T., Sevcikova, H. and Percival, D. B. (2012). Estimators of fractal dimension: Assessing the smoothness of time series and spatial data. Statistical Science, 27(2), 247-277. (Version as technical report available at \url{http://www.stat.washington.edu/research/reports/2010/tr577.pdf})
 }
-
 
 \keyword{ package }
 \seealso{

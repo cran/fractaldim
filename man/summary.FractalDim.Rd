@@ -16,9 +16,5 @@
   shows the mean and standard deviation of data in each of the two
 components (fd and scale).
 }
-\examples{
-example(fd.estimate)
-summary(fd)
-}
 \seealso{\code{\link{fd.estimate}}}
 \keyword{ts}

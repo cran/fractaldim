@@ -92,6 +92,7 @@ each sliding window of a given size that is moved along the data.}
 }
 
 \examples{
+\dontrun{
 library(RandomFields)
 n <- 10000
 # generate a time series
@@ -117,7 +118,7 @@ par(mfrow=c(2,2))
 # plots for 4 sliding windows (2 horizontal, 2 vertical)
 fd2d <- fd.estimate(rf2d, methods="filter1",
          window.size = 100, step.size=100, plot.loglog = TRUE)
-
+}
 }
 
 \seealso{\code{\link{fd.estim.method}}, \code{\link{fd.get.available.methods}}, \code{\link{FDloglog}}, \code{\link{fd.get}}}

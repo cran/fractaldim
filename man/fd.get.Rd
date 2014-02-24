@@ -21,6 +21,7 @@ fd.get(fractaldim, method)
 \value{A \code{\link{FractalDim}} object.  The original \code{fractaldim} arrays \code{fd} and \code{scale} are reduced in the last dimension into only one method, namely the given \code{method}. }
 
 \examples{
+\dontrun{
 library(RandomFields)
 x <- seq(0, 10000)
 # generate a random field
@@ -36,7 +37,6 @@ fdts <- fd.estimate (rf, methods = methods, window.size = 500,
     step.size = 100, nlags = 10, trim = FALSE, debuglevel = 3)
 
 # plot the variation
-\dontrun{
 cols <- rainbow(length(methods))
 plot(ts(fd.get (fdts, methods[1])$fd),ylim=c(min(fdts$fd), max(fdts$fd)),
              ylab="fd", col=cols[1])
@@ -46,7 +46,7 @@ legend('topleft', legend=methods, col=cols, lwd=1)
 abline(h=2-truealpha/2)
 }
 \dontshow{
-	for (imeth in 1:length(methods)) fd.get (fdts, methods[imeth])$fd
+#	for (imeth in 1:length(methods)) fd.get (fdts, methods[imeth])$fd
 }
 }
 \seealso{\code{\link{fd.estimate}}, \code{\link{fd.get.available.methods}}}

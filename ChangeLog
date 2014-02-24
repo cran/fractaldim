@@ -1,8 +1,22 @@
-0.8-1 (02/25/2010)
+0.8-4 (02/24/2014)
+-----
+A few examples disabled due to long run times.
+import(abind) added to namespace.
+
+0.8-3 (02/20/2014)
+-----
+A dot file removed (request from CRAN)
+
+0.8-2 (08/12/2011)
+-----
+Bug fixed that was eliminating the smallest lag in the DCTII method.
+Order of the authors changed.
+
+0.8-1 (02/25/2011)
 -----
 Made compatible with RandomFields 2.0.42.
 
-0.8-0 (02/24/2010)
+0.8-0 (02/24/2011)
 -----
 Help files finished. Various bugs fixed.
 Initial submission to CRAN.
