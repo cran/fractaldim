@@ -118,7 +118,8 @@ fd.Increment1 <- function(data, lags=1:2, p=2, ...) {
 }
 
 fd.estim.genton <- function (data, ...) {
-	require(pcaPP)
+	if(!requireNamespace("pcaPP", quietly = TRUE))
+	    stop("Package pcaPP not available.")
 	return(do.fd.estimate1d.method(data, 'fd.Genton', method.name='genton',
 									method.name.main="Robust Genton", 
 									p=2, yname = "log(Y)", ...))
@@ -131,7 +132,7 @@ fd.Genton <- function(data, lags=1:2, ...) {
   	for (j in 1:m) {
   		lag <- lags[j]
   		Vh <- data[(lag+1):n]-data[1:(n-lag)]
-  		g[j] <- (qn(Vh))^2
+  		g[j] <- (pcaPP::qn(Vh))^2
   	}
 	return(g)
 }

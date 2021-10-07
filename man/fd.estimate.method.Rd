@@ -242,6 +242,7 @@ For using multiple estimation methods via one function see \code{\link{fd.estima
 
 
 \examples{
+if (requireNamespace("RandomFields", quietly = TRUE)) withAutoprint({
 library(RandomFields)
 # 1d time series
 n <- 256
@@ -270,6 +271,7 @@ fd.estim.isotropic (rf2d, p.index = 1, direction='hv',
                        plot.loglog = TRUE, plot.allpoints = TRUE)
 fd.estim.squareincr (rf2d, p.index = 1, plot.loglog = TRUE, plot.allpoints = TRUE)
 fd.estim.filter1 (rf2d, p.index = 1, plot.loglog = TRUE, plot.allpoints = TRUE)
+})
 }
 \references{
 Chan, G., Hall, P., Poskitt, D. (1995) Periodogram-Based Estimators of Fractal
@@ -283,7 +285,7 @@ Davies, S., Hall, P. (1999) Fractal analysis of surface roughness by using spati
 	
 Genton, M. G. (1998) Highly robust variogram estimation. Mathematical Geology \bold{30}, 213--221.
 
-Gneiting, T., Sevcikova, H. and Percival, D. B. (2012). Estimators of fractal dimension: Assessing the smoothness of time series and spatial data. Statistical Science, 27(2), 247-277. (Version as technical report available at \url{http://www.stat.washington.edu/research/reports/2010/tr577.pdf})
+Gneiting, T., Sevcikova, H. and Percival, D. B. (2012). Estimators of fractal dimension: Assessing the smoothness of time series and spatial data. Statistical Science, 27(2), 247-277. (Version as technical report available at \url{https://stat.uw.edu/sites/default/files/files/reports/2010/tr577.pdf})
 
 
 Hall, P., Wood, A. (1993) On the Performance of Box-Counting Estimators of

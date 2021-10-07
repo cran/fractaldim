@@ -1,5 +1,7 @@
 import(abind)
-
+importFrom("graphics", "abline", "legend", "points")
+importFrom("stats", "fft", "median", "sd")
+  
 # export functions
 export(
 fd.estimate,

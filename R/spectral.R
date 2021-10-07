@@ -99,7 +99,8 @@ fd.estim.wavelet <- function (data,  plot.loglog=FALSE,
                            J0 = floor(log2(length(data))),
                            legend.type='s', ...,
                            debuglevel=0) {
-  	require(wavelets)
+  	if(!requireNamespace("wavelets", quietly = TRUE))
+  	    stop("Package wavelets not available.")
 
   	result <- WaveVarFD(data, filter=filter, J1=J1, J0=J0, all.points=plot.allpoints)
   	rawD <- structure(list(alpha=result$beta, intercept=result$zeta,
@@ -142,7 +143,7 @@ WaveVarFD <- function(X, filter="haar", J1=max(1,floor(log2(length(X))/3-1)), J0
     etao2 <- N/(2**(Js+1))  # used to be etao2 <- N/(2**Js)   
     N2 <- 2*N
     if (!is.element('numeric', class(X))) class(X) <- c('numeric', class(X)) # for modwt to work
-    wt <- modwt(X, filter, J0.all, "reflection")
+    wt <- wavelets::modwt(X, filter, J0.all, "reflection")
     wvar <- apply(sapply(wt@W, FUN=function(x) {x^2})[,Js] , MARGIN=2,
                   FUN=sum)/N2
     Y.all <- log(etao2*wvar) - digamma(etao2)
